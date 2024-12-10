@@ -8,13 +8,21 @@ def home():
 
 @app.route('/esp_timer',methods=["POST"])
 def esp_timer():
-    global data
+    global mess
     data = request.json
+    mess=int(data["minutes"])
+
     return "lekhya"
 
 @app.route('/timer_data',methods=["POST","GET"])
 def timer_data():
     try:
-        return data
+        return mess
     except:
         return "hello"
+    
+@app.route('/esp_stop',methods=["POST"])
+def esp_stop():
+    global mess
+    data=request.json
+    mess=data["mess"]
