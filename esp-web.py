@@ -14,4 +14,7 @@ def esp_timer():
 
 @app.route('/timer_data',methods=["POST","GET"])
 def timer_data():
-    return data
+    try:
+        return data
+    except:
+        return "hello"
