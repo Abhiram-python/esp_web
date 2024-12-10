@@ -10,7 +10,7 @@ def home():
 def esp_timer():
     global mess
     data = request.json
-    mess=int(data["minutes"])
+    mess=data["minutes"]
 
     return "lekhya"
 
