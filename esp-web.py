@@ -23,7 +23,7 @@ def timer_data():
     global new_mess
     if new_mess==True:
         new_mess=False
-        return [mess,"n"]
+        return f"n{mess}"
     else:
         return "1"
     
