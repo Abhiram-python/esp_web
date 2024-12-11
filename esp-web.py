@@ -29,8 +29,9 @@ def timer_data():
     
 @app.route('/esp_stop',methods=["POST"])
 def esp_stop():
-    global mess
+    global mess,new_mess
     data=request.json
+    new_mess=True
     mess=data["mess"]
 
     return "rith"
