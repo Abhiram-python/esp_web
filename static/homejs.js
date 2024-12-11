@@ -12,6 +12,6 @@ async function send_stop() {
     await fetch("https://esp-web-fjlb.onrender.com/esp_stop",{
         method:"POST",
         headers: { 'Content-Type': 'application/json' },
-        body:JSON.stringify({mess:"stop"})
+        body:JSON.stringify({mess:"0"})
     })
 }
